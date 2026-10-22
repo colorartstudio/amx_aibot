@@ -1,0 +1,6 @@
+{
+  "name": "AMX AIBOT TRADING",
+  "description": "Plataforma institucional de inteligência artificial, automação e trading sistemático em criptoativos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

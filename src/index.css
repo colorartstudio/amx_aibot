@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #050807;
+    --bg-secondary: #08100C;
+    --card-bg: #111815;
+    --green-main: #00B95A;
+    --green-neon: #39FF88;
+    --green-emerald: #087A45;
+    --green-light: #8CFFB2;
+    --gold-premium: #C9A24D;
+    --gold-light: #E7C873;
+    --text-primary: #FFFFFF;
+    --text-secondary: #9AA8A0;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+}
+
+/* Custom High-Tech Card styles as specified */
+.amx-card {
+  background: rgba(17, 24, 21, 0.82);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(57, 255, 136, 0.18);
+  box-shadow: 0 0 30px rgba(0, 255, 100, 0.06);
+  border-radius: 18px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amx-card:hover {
+  border-color: rgba(57, 255, 136, 0.45);
+  box-shadow: 0 8px 32px rgba(57, 255, 136, 0.14), 0 0 20px rgba(0, 185, 90, 0.12);
+  transform: translateY(-2px);
+}
+
+.amx-card-gold {
+  background: rgba(17, 24, 21, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 162, 77, 0.28);
+  box-shadow: 0 0 30px rgba(201, 162, 77, 0.08);
+  border-radius: 18px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amx-card-gold:hover {
+  border-color: rgba(231, 200, 115, 0.55);
+  box-shadow: 0 8px 32px rgba(201, 162, 77, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Technological Grid and Glow Backgrounds */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(57, 255, 136, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(57, 255, 136, 0.035) 1px, transparent 1px);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(8, 122, 69, 0.22) 0%, rgba(5, 8, 7, 0) 70%);
+}
+
+.bg-radial-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(201, 162, 77, 0.12) 0%, rgba(5, 8, 7, 0) 65%);
+}
+
+/* Subtle scanline and glowing pulses */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.02); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050807;
+}
+::-webkit-scrollbar-thumb {
+  background: #087A45;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00B95A;
+}
